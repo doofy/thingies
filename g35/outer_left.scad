@@ -37,7 +37,10 @@ difference() {
     translate([32 / 2 - 3.5, 23, 0]) rotate([0,0,-25]) cube([8, 1.5, $h]);
   }
   translate([32 / 2 - 17 / 2, 35 - 10, 5.5 + 1]) cube([17, 20, 1.3 + 5]);
-  translate([32 / 2, -5, 6.5]) rotate([-90, 0, 0]) cylinder(d = 6.5, 10);
+  translate([32 / 2, -5, 6.5]) rotate([-90, 0, 0]) hull() {
+    cylinder(d = 6.5, 10);
+    translate([0, -5, 0]) cylinder(d = 6.5, 10);
+  }
   translate([32 / 2, -5, 6.5]) rotate([-90, 0, 0]) cylinder(d = 4, h = 45);
 }
 
