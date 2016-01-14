@@ -54,13 +54,12 @@ module c920() {
       }
     }
 
-
     // speakers
     color("silver") {
       translate([($w - 73.6) / 2 - 0.5, $d / 2, $h]) cylinder(d = 6.5, h = 5.5);
       translate([$w - ($w - 73.6) / 2 + 0.5, $d / 2, $h]) cylinder(d = 6.5, h = 5.5);
     }
 
-    translate([$w / 2 - $sensor_w / 2, $d - 18.5 + 4.4, $h]) cube([$sensor_w, $sensor_d, $sensor_h]);
+    color("purple") translate([$w / 2 - $sensor_w / 2, $d - 18.5 + 4.4, $h]) cube([$sensor_w, $sensor_d, $sensor_h]);
   }
 }
