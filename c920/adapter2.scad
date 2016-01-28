@@ -13,11 +13,9 @@ $topholeoffset = 9.95;
 
 difference() {
   union() {
-    union() {
-      hull() {
-        cylinder(d = $outer, h = $baseheight);
-        translate([0, 0, 16 - 2.5 * 2]) cylinder(d = 15 + 3, h = 2.5 * 2);
-      }
+    hull() {
+      cylinder(d = $outer, h = $baseheight);
+      translate([0, 0, 16 - 2.5 * 2]) cylinder(d = 15 + 3, h = 2.5 * 2);
     }
     hull() {
       translate([-$holeoffset, 0, 0]) cylinder(d1 = $holeoutter, d2 = $holeoutter + 5, h = $holeoutterheight);
