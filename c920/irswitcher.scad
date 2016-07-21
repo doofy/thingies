@@ -38,3 +38,4 @@ module irswitcher() {
     translate([17 / 2 - 15.2 / 2, -12, 3.9]) cube([15.2, 12, 5]);
   }
 }
+irswitcher();
