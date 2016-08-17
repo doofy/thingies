@@ -1,4 +1,3 @@
-$fn=20;
 module c920() {
   $w = 79.7;
   $d = 22.3;
@@ -115,57 +114,4 @@ module c920() {
     color("white") translate([24, $d - 3 - 7, $h]) cube([3, 7, 7]);
   }
 
-  $w = 79.7;
-  $d = 22.3;
-  $h = 1.1;
-  $d4 = 1.6 * 0.9;
-  translate([-$w / 2, -$d / 2, 0]) {
-    // top-left small notch cutout
-    translate([9.26 + $d4 / 2, $d, $h * -1]) hull() {
-      cylinder(d = $d4, h = $h * 3);
-      translate([0, -2, 0]) cylinder(d = $d4, h = $h * 3);
-    }
-
-    // top-right small notch cutout
-    translate([$w - 9.26 + $d4 / 2, $d, $h * -1]) hull() {
-      cylinder(d = $d4, h = $h * 3);
-      translate([0, -2, 0]) cylinder(d = $d4, h = $h * 3);
-    }
-
-    //bottom-left big hole cutout
-    translate([($w - 73.6) / 2 + 3.1 + $d1 / 2, 0.9, $h * -1]) hull() {
-      cylinder(d = $d1, h = $h * 3);
-      translate([0, -2, 0]) cylinder(d = $d1, h = $h * 3);
-    }
-
-    //bottom-right big hole cutout
-    translate([$w - ($w - 73.6) / 2 - 3.1 - $d1 / 2, 0.9, $h * -1]) hull() {
-      cylinder(d = $d1, h = $h * 3);
-      translate([0, -2, 0]) cylinder(d = $d1, h = $h * 3);
-    }
-
-    // top-right small hole cutout
-    translate([$w - ($w - 73.6) / 2 - 8.4 - $d3 / 2, $d - $d3 / 2 - 1, $h * -1]) {
-      cylinder(d = $d3, h = $h * 3);
-    }
-
-    // bottom-left small hole cutout
-    translate([($w - 73.6) / 2 + 8.4 + $d3 / 2, 0.9, $h * -1]) hull() {
-      cylinder(d = $d3, h = $h * 3);
-      translate([0, -2, 0]) cylinder(d = $d3, h = $h * 3);
-    }
-
-    // bottom-right small hole cutout
-    translate([$w - ($w - 73.6) / 2 - 8.4 - $d3 / 2, 0.9, $h * -1]) hull() {
-      cylinder(d = $d3, h = $h * 3);
-      translate([0, -2, 0]) cylinder(d = $d3, h = $h * 3);
-    }
-
-    // cable cutout
-    translate([$w - 24.6, 7.75, $h * -1]) hull() {
-      cylinder(d = $cutout_hole_d, h = $h * 3);
-      translate([0, -4, 0]) cylinder(d = $cutout_hole_d, h = $h * 3);
-    }
-  }
 }
-c920();
