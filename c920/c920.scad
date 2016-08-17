@@ -48,7 +48,7 @@ module c920() {
       }
 
       // bottom-left small hole cutout
-      translate([($w - 73.6) / 2 + 8.4 + $d3 / 2, 0.9, $h * -1]) hull() {
+      translate([($w - 73.6) / 2 + 8.0 + $d3 / 2, 0.9, $h * -1]) hull() {
         cylinder(d = $d3, h = $h * 3);
         translate([0, -2, 0]) cylinder(d = $d3, h = $h * 3);
       }
@@ -77,13 +77,13 @@ module c920() {
       }
 
       // top-left small notch cutout
-      translate([9.26 + $d4 / 2, $d, $h * -1]) hull() {
+      translate([9.26, $d, $h * -1]) hull() {
         cylinder(d = $d4, h = $h * 3);
         translate([0, -2, 0]) cylinder(d = $d4, h = $h * 3);
       }
 
       // top-right small notch cutout
-      translate([$w - 9.26 + $d4 / 2, $d, $h * -1]) hull() {
+      translate([$w - 9.26, $d, $h * -1]) hull() {
         cylinder(d = $d4, h = $h * 3);
         translate([0, -2, 0]) cylinder(d = $d4, h = $h * 3);
       }
