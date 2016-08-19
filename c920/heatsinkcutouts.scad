@@ -1,15 +1,14 @@
 module heatsinkcutouts() {
-  $width = 39.3;
-  $depth = 13.0;
-  $height = 0.5;
+  $sizeoffset = 2;
+  $width = 39.3+0.2;
+  $depth = 13.0+0.2;
+  $height = 2.5;
   $hole = 1.3 * 0.5;
 
-  translate([-3 -3.5, -$depth + 1 + 3.5, -1.6]) {
-    translate([1.5, 1.5, -$height]) cylinder(d = $hole, h = 3 * $height);
-    translate([1.5, $depth - 1.5, -$height]) cylinder(d = $hole, h = 3 * $height);
-    translate([16.7, 1.5, -$height]) cylinder(d = $hole, h = 3 * $height);
-    translate([16.7, $depth - 1.5, -$height]) cylinder(d = $hole, h = 3 * $height);
-    translate([$width - 1.5, 1.5, -$height]) cylinder(d = $hole, h = 3 * $height);
-    translate([$width - 1.5, $depth - 1.5, -$height]) cylinder(d = $hole, h = 3 * $height);
+  translate([-3 -3.5-0.1, -$depth + 1 + 3.5+0.1, -1.6]) {
+    difference() {
+        translate([-$sizeoffset / 2, -$sizeoffset / 2, -2]) cube([$width + $sizeoffset, $depth + $sizeoffset, $height]);
+        translate([0, 0, -2]) cube([$width, $depth, $height+1]);
+    }
   }
 }
