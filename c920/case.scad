@@ -38,3 +38,4 @@ difference() {
 }
 
 translate([0, $outersmalld/2, 0]) mount();
+rotate([0,0,180]) translate([0, $outersmalld/2, 0]) mount();
