@@ -35,6 +35,15 @@ difference() {
   }
     translate([-$innerw / 2, -$innerd / 2, -2.2]) cube([$innerw, $innerd, $innerh]);
     translate([-$innersmallw / 2, -$innersmalld / 2, -2.2]) cube([$innersmallw, $innersmalld, $innersmallh]);
+    translate([-31.2, -2.5, -3*$wall]) {
+      for(i = [0 : 3]) {
+        for(j = [0 : 12]) {
+          translate([j*3, i*3, 0]) cylinder(h=3*$wall, d=2);
+        }
+      }
+    }
+    translate([-22, -13, -3*$wall]) cube([15, 5, 3*$wall]);
+    translate([22 - 15, -13, -3*$wall]) cube([15, 5, 3*$wall]);
 }
 
 translate([0, $outersmalld/2, 0]) mount();

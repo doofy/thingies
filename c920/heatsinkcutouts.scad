@@ -8,7 +8,7 @@ module heatsinkcutouts() {
   translate([-3 -3.5-0.1, -$depth + 1 + 3.5+0.1, -1.6]) {
     difference() {
         translate([-$sizeoffset / 2, -$sizeoffset / 2, -2]) cube([$width + $sizeoffset, $depth + $sizeoffset, $height]);
-        translate([0, 0, -2]) cube([$width, $depth, $height+1]);
+        translate([0, 0, -3]) cube([$width, $depth, $height+2]);
     }
   }
 }
